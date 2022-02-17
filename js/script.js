@@ -33,9 +33,31 @@ document.getElementById('calc-button').addEventListener('click', function () {
 })
 
 function updateExpences(inputId) {
-    const incomeInput = document.getElementById(inputId);
-    const incomeAmountText = incomeInput.value;
-    const incomeAmount = parseFloat(incomeAmountText);
-    return incomeAmount;
+    const inputField = document.getElementById(inputId);
+    const inputAmountText = inputField.value;
+    const inputAmount = parseFloat(inputAmountText);
+    return inputAmount;
 
 }
+// function updateExpences(inputId) {
+//     const incomeInput = document.getElementById(inputId);
+//     const incomeAmountText = incomeInput.value;
+//     const incomeAmount = parseFloat(incomeAmountText);
+//     return incomeAmount;
+
+// }
+const savingsParcent = 0;
+document.getElementById('save-button').addEventListener('click', function () {
+    const save = document.getElementById('savings-input').value;
+    if (save == savingsParcent) {
+        const savingsAmount = document.getElementById('savings-amount');
+        let savings = parseFloat(savingsAmount.innerText);
+        const savingsAfterPercent = (incomeAmount * 20) / 100;
+        savings = savings - savingsAfterPercent;
+        savingsAmount.innerText = savings;
+    }
+    else {
+
+    }
+
+})
