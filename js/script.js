@@ -23,7 +23,7 @@ function updateExpences(inputId) {
 }
 
 // update savings amount
-const savingsParcent = 30;
+const savingsParcent = 20;
 document.getElementById('save-button').addEventListener('click', function () {
     const save = document.getElementById('savings-input').value;
     const incomeAmount = document.getElementById('income-input').value;
@@ -40,8 +40,8 @@ document.getElementById('save-button').addEventListener('click', function () {
 
     // update remaining balance
     const remainingBalance = document.getElementById('remaining-balance');
-    const balance = document.getElementById('balance-total').value;
-    const savingsAmount = document.getElementById('savings-amount').value;
+    const balance = document.getElementById('balance-total').innerText;
+    const savingsAmount = document.getElementById('savings-amount').innerText;
     const remaining = balance - savingsAmount;
     remainingBalance.innerText = remaining;
 
