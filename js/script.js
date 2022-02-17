@@ -30,7 +30,7 @@ document.getElementById('save-button').addEventListener('click', function () {
         const savingsAmount = document.getElementById('savings-amount');
         let savings = parseFloat(savingsAmount.innerText);
         const savingsAfterPercent = (incomeAmount * 20) / 100;
-        savings = savings - savingsAfterPercent;
+        savings = savings + savingsAfterPercent;
         savingsAmount.innerText = savings;
     }
     else {
